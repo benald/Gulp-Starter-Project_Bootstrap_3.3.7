@@ -1,7 +1,7 @@
 # Gulp Starter Front End Project, built with uikit 2.27.4
 
 1. Open Terminal
-2. Navigate to the project folder 'cd frontend-starter'
+2. Navigate to the project folder 'cd Gulp-Starter-Project_Bootstrap_3.3.7'
 3. Install dependancies 
     i.  npm install
     ii. bower install
