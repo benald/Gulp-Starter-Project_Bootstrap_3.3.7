@@ -1,0 +1,81 @@
+@import "compass/css3";
+
+@mixin theme($name, $color) {
+  
+  /* declaring color variables */  
+  $neutralColor: rgba(adjust-hue($color, 123), .5);
+  $neutralColorHover: rgba(adjust-hue($color, 123), .75);
+  
+  $primaryColor: rgba(adjust-hue($color, 0), .5);
+  $primaryColorHover: rgba(adjust-hue($color, 0), .75);
+
+  $secondaryColor: rgba(adjust-hue($color, 678), .5);
+  $secondaryColorHover: rgba(adjust-hue($color, 678), .75);
+
+  $teritoryColor: rgba(adjust-hue($color, 777), .5);
+  $teritoryColorHover: rgba(adjust-hue($color, 777), .75);
+
+  $quaternaryColor: rgba(adjust-hue($color, 250), .75);
+  $quaternaryColorHover: rgba(adjust-hue($color, 250), 1);
+  
+  
+  /*  sub-classes 
+      $name = theme name with @include
+  */
+  .#{$name} {
+
+    /* BASE COLOR - nuetral BG */
+    .neutral-bg {
+      background: $neutralColor;
+      &:hover{
+        background: $neutralColorHover;
+      }
+    }
+
+    /* primary BG */
+    .primary-bg {
+      background: $primaryColor;
+      &:hover{
+        background: $primaryColorHover;
+      }
+    }
+
+    /* secondary BG */
+    .secondary-bg {
+      background: $secondaryColor;
+      &:hover{
+        background: $secondaryColorHover;
+      }
+    }
+
+    /* teritory BG */
+    .teritory-bg {
+      background: $teritoryColor;
+      &:hover{
+        background: $teritoryColorHover;
+      }
+    }
+
+    /* quaternary BG */
+    .quaternary-bg {
+      background: $quaternaryColor;
+      &:hover{
+        background: $quaternaryColorHover;
+      }
+    }
+  }
+}
+
+/*  calling @mixin using @include 
+    where "theme-a" = theme name
+    and   "#FF8C00" = color code
+*/
+@include theme(theme-a, #FF8C00);
+
+/* helper class */
+.box{ 
+  width: 200px; 
+  height: 200px; 
+  margin: 10px; 
+  float: left; 
+}
